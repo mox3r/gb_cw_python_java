@@ -15,7 +15,6 @@ class Controller(object):
     def delete(self, note_id):
         try:
             self.model.note_delete(note_id)
-            self.view.display_note_deleted(note_id)
         except ValueError:
             self.view.display_idNotExist_msg()
 

@@ -48,6 +48,7 @@ class ModelJson(object):
                 if note.note_id == note_id:
                     del self.notes[i]
             self.file_writer(self.notes)
+            View.display_note_deleted()
         elif msg == 'нет':
             View.display_cancel_msg()
 
